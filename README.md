@@ -66,7 +66,7 @@ Visit: [http://localhost:8080](http://localhost:8080)
 ![Profile & Order History](https://github.com/harika1807/Health_Bite_Delivery/blob/main/src/images/orders.png)
 
 ### Admin Dashboard
-![Admin Dashboard](https://github.com/harika1807/Health_Bite_Delivery/blob/main/src/images/adminDashboard.png)
+![Admin Dashboard](https://github.com/harika1807/Health_Bite_Delivery/blob/main/src/images/admindashboard.png)
 
 ### Sign In
 ![Sign In](https://github.com/harika1807/Health_Bite_Delivery/blob/main/src/images/signin.png)
