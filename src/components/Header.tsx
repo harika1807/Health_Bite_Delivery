@@ -1,4 +1,4 @@
-import { Search, ShoppingCart, User, Heart, LogOut } from "lucide-react";
+import { Search, ShoppingCart, User, Heart, LogOut, Shield } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { useAuth } from "@/hooks/useAuth";
@@ -80,6 +80,10 @@ const Header = () => {
               </DropdownMenuItem>
               <DropdownMenuItem onClick={() => navigate('/profile')}>
                 Settings
+              </DropdownMenuItem>
+              <DropdownMenuItem onClick={() => navigate('/admin')}>
+                <Shield className="h-4 w-4 mr-2" />
+                Admin Dashboard
               </DropdownMenuItem>
               <DropdownMenuSeparator />
               <DropdownMenuItem onClick={handleSignOut}>
