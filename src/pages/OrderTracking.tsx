@@ -241,11 +241,25 @@ const OrderTracking = () => {
               </div>
 
               <div className="space-y-3">
-                <Button className="w-full" variant="outline">
+                <Button 
+                  className="w-full" 
+                  variant="outline"
+                  onClick={() => {
+                    alert(`Receipt for Order #${orderId}\n\n${orderDetails.restaurant}\n\nItems:\n${orderDetails.items.map(item => `- ${item.name} x${item.quantity} - $${(item.price * item.quantity).toFixed(2)}`).join('\n')}\n\nSubtotal: $${(orderDetails.total * 0.9).toFixed(2)}\nDelivery Fee: $${(orderDetails.total * 0.08).toFixed(2)}\nTaxes: $${(orderDetails.total * 0.02).toFixed(2)}\n\nTotal: $${orderDetails.total.toFixed(2)}\n\nThank you for your order!`);
+                  }}
+                >
                   View Receipt
                 </Button>
                 {currentStatus.status === 'delivered' && (
-                  <Button className="w-full">
+                  <Button 
+                    className="w-full"
+                    onClick={() => {
+                      const rating = prompt('Rate this order from 1-5 stars:');
+                      if (rating && !isNaN(Number(rating)) && Number(rating) >= 1 && Number(rating) <= 5) {
+                        alert(`Thank you for rating this order ${rating} stars! Your feedback helps us improve.`);
+                      }
+                    }}
+                  >
                     Rate Order
                   </Button>
                 )}
